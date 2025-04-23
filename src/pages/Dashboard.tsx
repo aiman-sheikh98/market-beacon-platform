@@ -1,9 +1,10 @@
+
 import ProfileCard from "@/components/dashboard/ProfileCard";
 import { useEffect, useState } from "react";
 import { StockData, MarketIndex } from "@/types/stock";
 import { getStockData, getMarketIndices } from "@/lib/api";
 import StockCard from "@/components/stock/StockCard";
-import MarketOverview from "@/components/stock/MarketOverview";
+import { MarketOverview } from "@/components/dashboard/MarketOverview";
 
 const Dashboard = () => {
   const [topStocks, setTopStocks] = useState<StockData[]>([]);
@@ -40,7 +41,7 @@ const Dashboard = () => {
         {loading && <p>Loading data...</p>}
         {error && <p className="text-red-500">Error: {error}</p>}
 
-        <MarketOverview indices={marketIndices} />
+        <MarketOverview />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {topStocks.map((stock) => (
