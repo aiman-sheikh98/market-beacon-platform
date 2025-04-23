@@ -61,6 +61,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Market Beacon custom colors
+				financial: {
+					navy: '#1A1F2C',
+					gain: '#16a34a',
+					loss: '#dc2626',
+					neutral: '#6B7280',
+					highlight: '#2563eb',
+					lowlight: '#475569',
+					chart: {
+						line: '#3b82f6',
+						grid: '#cbd5e1',
+						background: '#f8fafc'
+					}
 				}
 			},
 			borderRadius: {
